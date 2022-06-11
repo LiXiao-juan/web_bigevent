@@ -6,7 +6,7 @@ function getUserInfo() {
     // headers:{Authorization:localStorage.getItem('token')},
     success: (res) => {
       if(res.status !== 0 )return layer.msg(res.message)
-      layer.msg('成功')
+      // layer.msg('成功')
       // 调用渲染函数
       render(res.data)
     },
