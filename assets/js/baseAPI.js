@@ -1,6 +1,5 @@
 $.ajaxPrefilter ((options) => {
-    options.url = 'http://www.liulongbin.top:3007' + options.url
-    console.log(options);
+    options.url = 'http://big-event-api-t.itheima.net' + options.url
     // 注入token
     if(options.url.includes('/my/')){
         options.headers = {
@@ -10,7 +9,6 @@ $.ajaxPrefilter ((options) => {
 
     // 权限校验
     options.complete = (res) => {
-        // console.log(res)
         if (
           res.responseJSON.status === 1 &&
           res.responseJSON.message === "身份认证失败！"

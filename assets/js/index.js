@@ -54,3 +54,7 @@ $('#btnClose').click(function () {
     }
   )
 })
+
+function change(){
+  $('#current').addClass('layui-this').next().removeClass('layui-this')
+}
